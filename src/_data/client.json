@@ -1,15 +1,15 @@
 {
-  "name": "Downs Construction LLC",
-  "email": "downsconstructionllc@gmail.com",
-  "phone": "269-599-4913",
-  "phoneFormatted": "(269)-599-4913",
+  "name": "Snacks For All Vending",
+  "email": "xxlorenzocolvin@icloud.com",
+  "phone": "313-772-0844",
+  "phoneFormatted": "(313)-772-0844",
   "address": {
-    "lineOne": "First Address Line",
+    "lineOne": "Kalamazoo, MI",
     "lineTwo": "Second Address Line, If Needed",
     "city": "Kalamazoo",
-    "county": "Mi",
-    "postcode": "80206",
-    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+    "county": "MI",
+    "postcode": "48226",
+    "mapLink": "https://maps.app.goo.gl/LnJVTVTXx2ttBE6p9"
   },
-  "domain": "www.website.com"
+  "domain": "www.snackforallvending.com"
 }

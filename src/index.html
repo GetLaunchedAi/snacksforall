@@ -1,82 +1,92 @@
 ---
 layout: 'base.html'
-description: 'Meta description for the page'
-metaTitle: 'Downs Construction LLC'
-tagTitle: 'Est. 1992'
-preloadImg: '/images/landing-1920w.webp'
+description: 'Snacks For All Vending provides reliable snack and beverage vending machine services for businesses,
+schools, and facilities across Detroit and surrounding areas.'
+metaTitle: 'Snacks For All Vending | Snack & Beverage Vending Solutions'
+tagTitle: 'Snacks & Beverages On Demand'
+preloadImg: '/images/vending-banner.png'
 preloadCSS: '/css/local.css'
 permalink: '/'
 eleventyNavigation:
-  key: Home
-  order: 100
+key: Home
+order: 100
 ---
+
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
-
 <section id="hero-2410">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Welcome to Vend Success Academy</span>
-            <h1 class="cs-title">Hands-On Vending Machine Mentorship Program</h1>
-            <p class="cs-text">
-                We help new and aspiring entrepreneurs build profitable vending businesses through in-person training, real-world experience, and step-by-step mentorship.
-            </p>
-            <a href="/contact" class="cs-button-solid">Apply for Mentorship</a>
-        </div>
-        <div class="cs-image-group">
-  <div class="cs-picture">
-    <!-- VIDEO VERSION -->
-    <video
-      class="cs-media"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      poster="/images/downsherobg-poster.jpg"
-    >
-      <source src="/images/downsherobg.mp4" type="video/mp4">
-      <!-- add a second source for different codec if needed -->
-      <!-- <source src="/images/downsherobg.webm" type="video/webm"> -->
-    </video>
-
-    <!-- IMAGE VERSION (alternative; comment video above and uncomment this if you want an image instead)
-    <img class="cs-media" decoding="async" fetchpriority="high"
-         src="/images/downsherobg.jpg" alt="dog" width="635" height="836">
-    -->
-
-        </div>
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Welcome to Vend Success Academy</span>
+      <h1 class="cs-title">Hands-On Vending Machine Mentorship Program</h1>
+      <p class="cs-text">
+        We help new and aspiring entrepreneurs build profitable vending businesses through in-person training,
+        real-world experience, and step-by-step mentorship.
+      </p>
+      <a href="/contact" class="cs-button-solid">Apply for Mentorship</a>
     </div>
-        <!--Hero Image-->
+    <div class="cs-image-group">
+      <div class="cs-picture">
+        <!-- VIDEO VERSION -->
+        <video class="cs-media" autoplay muted loop playsinline preload="metadata"
+          poster="/images/hero_pic.png" id="hero-video">
+          <source src="/images/hero_vid.mp4" type="video/mp4">
+          <!-- Optional: Add a second source for broader browser support -->
+          <!-- <source src="/images/hero_vid.webm" type="video/webm"> -->
+        </video>
+
+        <button id="mute-toggle" class="mute-button" aria-label="Toggle Mute">
+          🔇
+        </button>
+
+        <script>
+          const video = document.getElementById('hero-video');
+          const muteToggle = document.getElementById('mute-toggle');
+
+          muteToggle.addEventListener('click', () => {
+            video.muted = !video.muted;
+            muteToggle.textContent = video.muted ? '🔇' : '🔊';
+          });
+        </script>
+      </div>
     </div>
-    <svg class="cs-wave" width="1920" height="167" viewBox="0 0 1920 167" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1920 167H0V0C111.116 45.3334 456.485 136 951 136C1445.52 136 1803.21 45.3334 1920 0V167Z" fill="white"/>
-    </svg>
+    <!--Hero Image-->
+  </div>
+  <svg class="cs-wave" width="1920" height="167" viewBox="0 0 1920 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1920 167H0V0C111.116 45.3334 456.485 136 951 136C1445.52 136 1803.21 45.3334 1920 0V167Z" fill="white" />
+  </svg>
 </section>
 
-
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
 <section id="services" class="services">
   <div class="card">
     <picture>
-      <img aria-hidden="true" decoding="async" src="/assets/svgs/service1.svg" alt="startup icon" width="48" height="48" />
+      <img aria-hidden="true" decoding="async" src="/assets/svgs/service_1.svg" alt="startup icon" width="48"
+        height="48" />
     </picture>
     <h2>Getting Started</h2>
-    <p>Learn how to set up your vending business from scratch, from licensing and suppliers to location scouting and equipment selection.</p>
+    <p>Learn how to set up your vending business from scratch, from licensing and suppliers to location scouting and
+      equipment selection.</p>
   </div>
   <div class="card">
     <picture>
-      <img aria-hidden="true" decoding="async" src="/assets/svgs/service2.svg" alt="operations icon" width="48" height="48" />
+      <img aria-hidden="true" decoding="async" src="/assets/svgs/service_2.svg" alt="operations icon" width="48"
+        height="48" />
     </picture>
     <h2>Day-to-Day Operations</h2>
     <p>Master restocking, route management, and customer service with hands-on training in real vending locations.</p>
   </div>
   <div class="card">
     <picture>
-      <img aria-hidden="true" decoding="async" src="/assets/svgs/service3.svg" alt="growth icon" width="48" height="48" />
+      <img aria-hidden="true" decoding="async" src="/assets/svgs/service_3.svg" alt="growth icon" width="48"
+        height="48" />
     </picture>
     <h2>Scaling & Growth</h2>
-    <p>Learn strategies to expand your routes, add machines, and grow your income with mentorship tailored to your goals.</p>
+    <p>Learn strategies to expand your routes, add machines, and grow your income with mentorship tailored to your
+      goals.</p>
   </div>
 </section>
 
@@ -86,25 +96,29 @@ eleventyNavigation:
 <section id="sbs">
   <div class="cs-container">
     <div class="cs-left">
-      {% image './src/images/aboutimg1.png', 'mentorship session', 'cs-picture cs-picture1', 'lazy'%}
-      {% image './src/images/aboutimg2a.jpg', 'hands-on training', 'cs-picture cs-picture2', 'lazy'%}
+      {% image './src/images/about_img_0.png', 'mentorship session', 'cs-picture cs-picture1', 'lazy'%}
+      {% image './src/images/about_img_1.png', 'hands-on training', 'cs-picture cs-picture2', 'lazy'%}
     </div>
     <div class="cs-right">
       <span class="cs-topper">About Us</span>
       <h2 class="cs-title">In-Person Mentorship That Delivers Results</h2>
       <p class="cs-text">
-        Our vending machine mentorship program is designed for aspiring entrepreneurs who want real-world guidance, not just theory. With practical instruction and hands-on experience, you’ll learn every detail of running a profitable vending business.
+        Our vending machine mentorship program is designed for aspiring entrepreneurs who want real-world guidance, not
+        just theory. With practical instruction and hands-on experience, you’ll learn every detail of running a
+        profitable vending business.
       </p>
       <p class="cs-text">
-        We focus on building long-term confidence, ensuring you not only launch successfully but also know how to sustain and grow your routes with clarity and efficiency.
+        We focus on building long-term confidence, ensuring you not only launch successfully but also know how to
+        sustain and grow your routes with clarity and efficiency.
       </p>
       <div class="cs-flex-group">
         <p class="cs-flex-p">
           "We don’t just teach vending—we walk with you every step of the way."
         </p>
-        <img class="cs-quote-icon" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="quote icon" width="136" height="77" />
+        <img class="cs-quote-icon" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
+          alt="quote icon" width="136" height="77" />
       </div>
-      <a href="/about" class="button-solid">Learn More About the Program</a>
+      <!-- <a href="/about" class="button-solid">Learn More About the Program</a> -->
     </div>
   </div>
 </section>
@@ -113,53 +127,60 @@ eleventyNavigation:
 <!--                 Why Choose Us                -->
 <!-- ============================================ -->
 <section id="why-choose-376">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Why Choose Us</span>
-            <h2 class="cs-title">In-Person Vending Mentorship You Can Trust</h2>
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <img class="cs-bullet" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/splash-bullet.svg" aria-hidden="true" loading="lazy" decoding="async" alt="splash icon" width="19" height="20">
-                    <div class="cs-flex">
-                        <h3 class="cs-h3">Hands-On Training</h3>
-                        <p class="cs-item-text">
-                            Learn directly on real vending routes—stocking machines, handling payments, and solving issues alongside experienced mentors.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <img class="cs-bullet" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/splash-bullet.svg" aria-hidden="true" loading="lazy" decoding="async" alt="splash icon" width="19" height="20">
-                    <div class="cs-flex">
-                        <h3 class="cs-h3">Step-by-Step Business Guidance</h3>
-                        <p class="cs-item-text">
-                            From licensing and suppliers to route planning and machine placement, we walk you through every step of launching your vending business.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <img class="cs-bullet" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/splash-bullet.svg" aria-hidden="true" loading="lazy" decoding="async" alt="splash icon" width="19" height="20">
-                    <div class="cs-flex">
-                        <h3 class="cs-h3">Ongoing Mentorship & Support</h3>
-                        <p class="cs-item-text">
-                            Our program doesn’t end after training—we provide continued mentorship, advice, and resources as you grow your vending business.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!--Left Image Group-->
-        <div class="cs-image-group">
-            <!-- keep all your existing images/decorative elements here -->
-            <img class="cs-splash" src="/images/vendingmachine1.png" aria-hidden="true" loading="lazy" decoding="async" alt="splash icon" width="570" height="586">
-            <!-- <img class="cs-blob" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/blob.svg" aria-hidden="true" loading="lazy" decoding="async" alt="blob icon" width="392" height="497">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Why Choose Us</span>
+      <h2 class="cs-title">In-Person Vending Mentorship You Can Trust</h2>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <img class="cs-bullet" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/splash-bullet.svg"
+            aria-hidden="true" loading="lazy" decoding="async" alt="splash icon" width="19" height="20">
+          <div class="cs-flex">
+            <h3 class="cs-h3">Hands-On Training</h3>
+            <p class="cs-item-text">
+              Learn directly on real vending routes—stocking machines, handling payments, and solving issues alongside
+              experienced mentors.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <img class="cs-bullet" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/splash-bullet.svg"
+            aria-hidden="true" loading="lazy" decoding="async" alt="splash icon" width="19" height="20">
+          <div class="cs-flex">
+            <h3 class="cs-h3">Step-by-Step Business Guidance</h3>
+            <p class="cs-item-text">
+              From licensing and suppliers to route planning and machine placement, we walk you through every step of
+              launching your vending business.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <img class="cs-bullet" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/splash-bullet.svg"
+            aria-hidden="true" loading="lazy" decoding="async" alt="splash icon" width="19" height="20">
+          <div class="cs-flex">
+            <h3 class="cs-h3">Ongoing Mentorship & Support</h3>
+            <p class="cs-item-text">
+              Our program doesn’t end after training—we provide continued mentorship, advice, and resources as you grow
+              your vending business.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--Left Image Group-->
+    <div class="cs-image-group">
+      <!-- keep all your existing images/decorative elements here -->
+      <img class="cs-splash" src="/images/vendingmachine1.png" aria-hidden="true" loading="lazy" decoding="async"
+        alt="splash icon" width="570" height="586">
+      <!-- <img class="cs-blob" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/blob.svg" aria-hidden="true" loading="lazy" decoding="async" alt="blob icon" width="392" height="497">
             <img class="cs-lightning" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/lightning.svg" aria-hidden="true" loading="lazy" decoding="async" alt="lightning icon" width="392" height="497">
              -->
-            <!-- <picture class="cs-left-image">
+      <!-- <picture class="cs-left-image">
                 <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2-m.jpg">
                 <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2.jpg">
                 <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2.jpg" alt="cleaning" width="211" height="211" aria-hidden="true">
             </picture> -->
-            <!-- <picture class="cs-bottom-image">
+      <!-- <picture class="cs-bottom-image">
                 <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning4.jpg">
                 <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning4.jpg">
                 <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning4.jpg" alt="cleaning" width="180" height="180" aria-hidden="true">
@@ -169,94 +190,106 @@ eleventyNavigation:
                 <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner3.png">
                 <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner3.png" alt="cleaning" width="386" height="521" aria-hidden="true">
             </picture> -->
-            <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383 173"><path d="M0 131.021c0-29.542...Z" fill="#fff"/></svg>
-        </div>
+      <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383 173">
+        <path d="M0 131.021c0-29.542...Z" fill="#fff" />
+      </svg>
     </div>
+  </div>
 </section>
+
 <!-- ============================================ -->
 <!--                    Steps                     -->
 <!-- ============================================ -->
-
 <section id="steps-1376">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Our Process</span>
-            <h2 class="cs-title">How Our Mentorship Works</h2>
-        </div>
-        <div class="cs-card-group">
-            <div class="cs-group1">
-                <div class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step1.svg" alt="icon" width="48" height="48"/>
-                    </picture>
-                    <h3 class="cs-h3">Discovery</h3>
-                    <p class="cs-item-text">
-                        We start with an in-person consultation to understand your goals, background, and vision for your vending business.
-                    </p>
-                </div>
-                <div class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step2.svg" alt="icon" width="32" height="32"/>
-                    </picture>
-                    <h3 class="cs-h3">Training</h3>
-                    <p class="cs-item-text">
-                        Receive classroom and field training, learning directly on active vending routes with real machines.
-                    </p>
-                </div>
-                <div class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step3.svg" alt="icon" width="32" height="32"/>
-                    </picture>
-                    <h3 class="cs-h3">Hands-On Practice</h3>
-                    <p class="cs-item-text">
-                        Work alongside mentors in live environments—stocking, collecting, troubleshooting, and building confidence.
-                    </p>
-                </div>
-            </div>
-            <div class="cs-group2">
-                <div class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step4.svg" alt="icon" width="32" height="32"/>
-                    </picture>
-                    <h3 class="cs-h3">Implementation</h3>
-                    <p class="cs-item-text">
-                        Launch your first machine or route with mentor guidance to avoid costly mistakes and set a strong foundation.
-                    </p>
-                </div>
-                <div class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step3.svg" alt="icon" width="32" height="32"/>
-                    </picture>
-                    <h3 class="cs-h3">Ongoing Support</h3>
-                    <p class="cs-item-text">
-                        Stay connected with continued mentorship, troubleshooting advice, and growth strategies as your business expands.
-                    </p>
-                </div>
-            </div>
-                        <picture class="cs-waves">
-                <!--Mobile Image-->
-                <source media="(max-width: 1023px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-tablet.svg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 1024px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-desktop.svg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-desktop.svg" alt="wave" width="1280" height="568">
-            </picture>
-        </div>
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Process</span>
+      <h2 class="cs-title">How Our Mentorship Works</h2>
     </div>
+    <div class="cs-card-group">
+      <div class="cs-group1">
+        <div class="cs-item">
+          <picture class="cs-picture">
+            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step1.svg" alt="icon"
+              width="48" height="48" />
+          </picture>
+          <h3 class="cs-h3">Discovery</h3>
+          <p class="cs-item-text">
+            We start with an in-person consultation to understand your goals, background, and vision for your vending
+            business.
+          </p>
+        </div>
+        <div class="cs-item">
+          <picture class="cs-picture">
+            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step2.svg" alt="icon"
+              width="32" height="32" />
+          </picture>
+          <h3 class="cs-h3">Training</h3>
+          <p class="cs-item-text">
+            Receive classroom and field training, learning directly on active vending routes with real machines.
+          </p>
+        </div>
+        <div class="cs-item">
+          <picture class="cs-picture">
+            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step3.svg" alt="icon"
+              width="32" height="32" />
+          </picture>
+          <h3 class="cs-h3">Hands-On Practice</h3>
+          <p class="cs-item-text">
+            Work alongside mentors in live environments—stocking, collecting, troubleshooting, and building confidence.
+          </p>
+        </div>
+      </div>
+      <div class="cs-group2">
+        <div class="cs-item">
+          <picture class="cs-picture">
+            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step4.svg" alt="icon"
+              width="32" height="32" />
+          </picture>
+          <h3 class="cs-h3">Implementation</h3>
+          <p class="cs-item-text">
+            Launch your first machine or route with mentor guidance to avoid costly mistakes and set a strong
+            foundation.
+          </p>
+        </div>
+        <div class="cs-item">
+          <picture class="cs-picture">
+            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step3.svg" alt="icon"
+              width="32" height="32" />
+          </picture>
+          <h3 class="cs-h3">Ongoing Support</h3>
+          <p class="cs-item-text">
+            Stay connected with continued mentorship, troubleshooting advice, and growth strategies as your business
+            expands.
+          </p>
+        </div>
+      </div>
+      <picture class="cs-waves">
+        <!--Mobile Image-->
+        <source media="(max-width: 1023px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-tablet.svg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 1024px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-desktop.svg">
+        <img loading="lazy" decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-desktop.svg" alt="wave" width="1280"
+          height="568">
+      </picture>
+    </div>
+  </div>
 </section>
 
-
-
-
-                                
-
-
+<!-- ============================================ -->
+<!--                    CTA                      -->
+<!-- ============================================ -->
 <section id="cta">
   <div class="container">
     <h2 class="title">
       Take Control of Your Future with Vending
     </h2>
     <p>
-      Ready to start your journey into vending? Apply for our in-person mentorship program today and gain the skills to launch and grow your vending business with confidence.
+      Ready to start your journey into vending? Apply for our in-person mentorship program today and gain the skills to
+      launch and grow your vending business with confidence.
     </p>
     <button class="snipcart-checkout">
       <a class="button-solid">Apply Now</a>
@@ -265,11 +298,13 @@ eleventyNavigation:
 
 
   </div>
-  {% image './src/images/finalhomeimg.jpg', 'mentorship training', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  {% image './src/images/finalhomeimg.jpg', 'mentorship training', '', 'lazy', '(max-width: 400px) 400px, (max-width:
+  850px) 850px, 1920px'%}
 </section>
 
-
-
+<!-- ============================================ -->
+<!--                  Netlify CMS                   -->
+<!-- ============================================ -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
   if (window.netlifyIdentity) {
