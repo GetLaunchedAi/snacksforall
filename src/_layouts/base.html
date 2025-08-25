@@ -41,6 +41,9 @@
         <link rel="stylesheet" href="/css/critical.css"/>
         <link rel="stylesheet" href="{{ preloadCSS }}">
 
+        <!-- Snipcart tag -->
+         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
+
         <!--Put analytics tag here at the bottom to prevent it from render blocking-->
 
         <!-- For home page, use full title, including location for SEO. Other pages should just include the page name -->
@@ -57,6 +60,7 @@
         <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 
         {% include "header.html" %}
+
         <main id="main">{{ content | safe }}</main>
         {% include "footer.html" %}
 
@@ -84,6 +88,10 @@
                 }
             });
         </script>
+
+        <div hidden id="snipcart" data-api-key="Y2U1NGIwOTYtMTE0OC00NWI1LThlMDgtNTU4MzJkNWUxNGRjNjM4OTEzOTgwNjQ2NjE3NTAy"></div>
+<script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+
 
     </body>
 </html>

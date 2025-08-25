@@ -24,6 +24,30 @@ eleventyNavigation:
             </p>
             <a href="/contact" class="cs-button-solid">Apply for Mentorship</a>
         </div>
+        <div class="cs-image-group">
+  <div class="cs-picture">
+    <!-- VIDEO VERSION -->
+    <video
+      class="cs-media"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="/images/downsherobg-poster.jpg"
+    >
+      <source src="/images/downsherobg.mp4" type="video/mp4">
+      <!-- add a second source for different codec if needed -->
+      <!-- <source src="/images/downsherobg.webm" type="video/webm"> -->
+    </video>
+
+    <!-- IMAGE VERSION (alternative; comment video above and uncomment this if you want an image instead)
+    <img class="cs-media" decoding="async" fetchpriority="high"
+         src="/images/downsherobg.jpg" alt="dog" width="635" height="836">
+    -->
+
+        </div>
+    </div>
         <!--Hero Image-->
     </div>
     <svg class="cs-wave" width="1920" height="167" viewBox="0 0 1920 167" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -234,7 +258,12 @@ eleventyNavigation:
     <p>
       Ready to start your journey into vending? Apply for our in-person mentorship program today and gain the skills to launch and grow your vending business with confidence.
     </p>
-    <a href="/contact" class="button-solid">Apply Now</a>
+    <button class="snipcart-checkout">
+      <a class="button-solid">Apply Now</a>
+    </button>
+    <button class="snipcart-checkout">Cart</button>
+
+
   </div>
   {% image './src/images/finalhomeimg.jpg', 'mentorship training', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
 </section>

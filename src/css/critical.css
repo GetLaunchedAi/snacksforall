@@ -115,71 +115,41 @@
   #hero-2410 .cs-button-solid:hover:before {
     width: 100%;
   }
-  #hero-2410 .cs-image-group {
-    /* we use ems for everything inside the cs-image-group so they pull their value for em from the cs-image-group container that we set.  This min-max property lets us tie the font size to the view width of the screen and grows proportionally with every pixel wide the screen gets until the value the view width units = .75em, resets at small desktop */
-    font-size: min(1.7vw, .55rem);
-    width: 52.1875em;
-    height: 52.25em;
-    /* prevents flexbox from squishing it */
-    flex: none;
-    position: relative;
-    z-index: 2;
-  }
-  #hero-2410 .cs-picture {
-    width: 39.6875em;
-    height: 52.25em;
-    display: flex;
-    align-items: flex-end;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  #hero-2410 .cs-picture img {
-    width: auto;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    /* make this number negative if you have a wide image that gets cut off on the right and want to move it ove to the left more */
-    left: 0;
-  }
-  #hero-2410 .cs-circle {
-    width: 47.375em;
-    height: auto;
-    position: absolute;
-    right: 0;
-    bottom: 1.125em;
-    z-index: -1;
-  }
-  #hero-2410 .cs-circle circle {
-    fill: var(--primary);
-    opacity: 0.2;
-  }
-  #hero-2410 .cs-arrow {
-    /* 60px - 130px */
-    width: 4.75em;
-    height: auto;
-    position: absolute;
-    bottom: 11.375em;
-    left: 6.4375em;
-    transform: rotate(28deg);
-  }
-  #hero-2410 .cs-no-no {
-    width: 10.3125em;
-    height: auto;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  #hero-2410 .cs-wave {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-  }
+/* unchanged container sizing */
+#hero-2410 .cs-image-group {
+  font-size: min(1.7vw, .55rem);
+  width: 52.1875em;
+  height: 52.25em;
+  flex: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* unchanged picture box */
+#hero-2410 .cs-picture {
+  width: 100%;
+  height: 52.25em;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* key bit: style IMG and VIDEO exactly the same */
+#hero-2410 .cs-picture .cs-media {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;           /* make negative if you need to nudge left */
+  object-fit: cover; /* crops like a background image */
+  object-position: center;
+  display: block;
+  /* optional if the media is purely decorative */
+  pointer-events: none;
+}
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
