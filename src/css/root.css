@@ -1319,3 +1319,9 @@
   position: relative;
   z-index: 1;
 }
+
+.logo-text{
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
