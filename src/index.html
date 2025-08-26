@@ -285,4 +285,15 @@ eleventyNavigation:
         }
       });
   }
+
+  document.addEventListener('snipcart.ready', () => {
+    Snipcart.api.cart.items.add({
+      id: "product-123",
+      name: "My Product",
+      price: "49.99",
+      url: "https://snacksforall.netlify.app/",   // must match a valid URL on your site
+      quantity: 1
+    });
+  });
+
 </script>
