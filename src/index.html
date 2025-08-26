@@ -1,7 +1,7 @@
 ---
 layout: 'base.html'
 description: 'Meta description for the page'
-metaTitle: 'Downs Construction LLC'
+metaTitle: 'Snacks For All'
 tagTitle: 'Est. 1992'
 preloadImg: '/images/landing-1920w.webp'
 preloadCSS: '/css/local.css'
@@ -13,46 +13,47 @@ eleventyNavigation:
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
-
 <section id="hero-2410">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Welcome to Vend Success Academy</span>
-            <h1 class="cs-title">Hands-On Vending Machine Mentorship Program</h1>
-            <p class="cs-text">
-                We help new and aspiring entrepreneurs build profitable vending businesses through in-person training, real-world experience, and step-by-step mentorship.
-            </p>
-            <a href="/contact" class="cs-button-solid">Apply for Mentorship</a>
-        </div>
-        <div class="cs-image-group">
-  <div class="cs-picture">
-    <!-- VIDEO VERSION -->
-    <video
-      class="cs-media"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      poster="/images/downsherobg-poster.jpg"
-    >
-      <source src="/images/downsherobg.mp4" type="video/mp4">
-      <!-- add a second source for different codec if needed -->
-      <!-- <source src="/images/downsherobg.webm" type="video/webm"> -->
-    </video>
-
-    <!-- IMAGE VERSION (alternative; comment video above and uncomment this if you want an image instead)
-    <img class="cs-media" decoding="async" fetchpriority="high"
-         src="/images/downsherobg.jpg" alt="dog" width="635" height="836">
-    -->
-
-        </div>
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Welcome to Vend Success Academy</span>
+      <h1 class="cs-title">Hands-On Vending Machine Mentorship Program</h1>
+      <p class="cs-text">
+        We help new and aspiring entrepreneurs build profitable vending businesses through in-person training,
+        real-world experience, and step-by-step mentorship.
+      </p>
+      <a href="/contact" class="cs-button-solid">Apply for Mentorship</a>
     </div>
-        <!--Hero Image-->
+    <div class="cs-image-group">
+      <div class="cs-picture">
+        <!-- VIDEO VERSION -->
+        <video class="cs-media" autoplay muted loop playsinline preload="metadata" poster="/images/hero_pic.jpg"
+          id="hero-video">
+          <source src="/images/snacksforallhero.mp4" type="video/mp4">
+          <!-- Optional: Add a second source for broader browser support -->
+          <!-- <source src="/images/hero_vid.webm" type="video/webm"> -->
+        </video>
+
+        <button id="mute-toggle" class="mute-button" aria-label="Toggle Mute">
+          🔇
+        </button>
+
+        <script>
+          const video = document.getElementById('hero-video');
+          const muteToggle = document.getElementById('mute-toggle');
+
+          muteToggle.addEventListener('click', () => {
+            video.muted = !video.muted;
+            muteToggle.textContent = video.muted ? '🔇' : '🔊';
+          });
+        </script>
+      </div>
     </div>
-    <svg class="cs-wave" width="1920" height="167" viewBox="0 0 1920 167" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1920 167H0V0C111.116 45.3334 456.485 136 951 136C1445.52 136 1803.21 45.3334 1920 0V167Z" fill="white"/>
-    </svg>
+    <!--Hero Image-->
+  </div>
+  <svg class="cs-wave" width="1920" height="167" viewBox="0 0 1920 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1920 167H0V0C111.116 45.3334 456.485 136 951 136C1445.52 136 1803.21 45.3334 1920 0V167Z" fill="white" />
+  </svg>
 </section>
 
 
@@ -261,7 +262,6 @@ eleventyNavigation:
     <button class="snipcart-checkout">
       <a class="button-solid">Apply Now</a>
     </button>
-    <button class="snipcart-checkout">Cart</button>
 
 
   </div>
