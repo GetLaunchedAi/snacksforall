@@ -291,8 +291,12 @@ order: 100
       Ready to start your journey into vending? Apply for our in-person mentorship program today and gain the skills to
       launch and grow your vending business with confidence.
     </p>
-
-    <a href="/contact" class="custom-btn">Apply Now</a>
+    <<<<<<< HEAD <a href="/contact" class="custom-btn">Apply Now</a>
+      =======
+      <button class="snipcart-checkout">
+        <a class="button-solid">Apply Now</a>
+      </button>
+      >>>>>>> 559a714646fabc82bf43394a25be3df07176f6b7
 
 
   </div>
@@ -318,4 +322,15 @@ order: 100
         }
       });
   }
+
+  document.addEventListener('snipcart.ready', () => {
+    Snipcart.api.cart.items.add({
+      id: "product-123",
+      name: "My Product",
+      price: "49.99",
+      url: "https://snacksforall.netlify.app/",   // must match a valid URL on your site
+      quantity: 1
+    });
+  });
+
 </script>
