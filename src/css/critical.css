@@ -13,6 +13,7 @@
     position: relative;
     z-index: 1;
   }
+
   #hero-2410:before {
     /* background color */
     content: '';
@@ -26,6 +27,7 @@
     left: 0;
     z-index: -1;
   }
+
   #hero-2410 .cs-container {
     width: 100%;
     max-width: 80rem;
@@ -36,6 +38,7 @@
     flex-direction: column;
     gap: 3rem;
   }
+
   #hero-2410 .cs-content {
     max-width: 34.375rem;
     display: flex;
@@ -43,6 +46,7 @@
     align-items: center;
     flex-direction: column;
   }
+
   #hero-2410 .cs-topper {
     font-size: 1rem;
     line-height: 1.2em;
@@ -54,6 +58,7 @@
     margin-bottom: 0.25rem;
     display: block;
   }
+
   #hero-2410 .cs-title {
     /* 39px - 72px */
     font-size: clamp(2.4375rem, 4.75vw, 4.25rem);
@@ -66,6 +71,7 @@
     color: var(--headerColor);
     position: relative;
   }
+
   #hero-2410 .cs-text {
     /* 16px - 20px */
     font-size: clamp(1rem, 1.5vw, 1.25rem);
@@ -77,6 +83,7 @@
     margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
     color: var(--bodyTextColor);
   }
+
   #hero-2410 .cs-button-solid {
     --gradientmix: color-mix(in lab, var(--primary), black 49%);
     font-size: 1rem;
@@ -99,6 +106,7 @@
     position: relative;
     z-index: 1;
   }
+
   #hero-2410 .cs-button-solid:before {
     content: '';
     width: 0%;
@@ -112,101 +120,118 @@
     transition: width 0.3s;
     opacity: 1;
   }
+
   #hero-2410 .cs-button-solid:hover:before {
     width: 100%;
   }
-/* unchanged container sizing */
-#hero-2410 .cs-image-group {
-  font-size: min(1.7vw, .55rem);
-  width: 52.1875em;
-  height: 52.25em;
-  flex: none;
-  position: relative;
-  z-index: 2;
+
+  /* unchanged container sizing */
+  #hero-2410 .cs-image-group {
+    font-size: min(1.7vw, .55rem);
+    width: 52.1875em;
+    height: 52.25em;
+    flex: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* unchanged picture box */
+  #hero-2410 .cs-picture {
+    width: 100%;
+    height: 52.25em;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  /* key bit: style IMG and VIDEO exactly the same */
+  #hero-2410 .cs-picture .cs-media {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    /* make negative if you need to nudge left */
+    object-fit: cover;
+    /* crops like a background image */
+    object-position: center;
+    display: block;
+    /* optional if the media is purely decorative */
+    pointer-events: none;
+  }
 }
 
-/* unchanged picture box */
-#hero-2410 .cs-picture {
-  width: 100%;
-  height: 52.25em;
-  display: flex;
-  align-items: flex-end;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/* key bit: style IMG and VIDEO exactly the same */
-#hero-2410 .cs-picture .cs-media {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;           /* make negative if you need to nudge left */
-  object-fit: cover; /* crops like a background image */
-  object-position: center;
-  display: block;
-  /* optional if the media is purely decorative */
-  pointer-events: none;
-}
-}
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #hero-2410 {
     text-align: left;
   }
+
   #hero-2410 .cs-container {
     flex-direction: row;
     justify-content: space-between;
   }
+
   #hero-2410 .cs-content {
     width: 40vw;
     /* prevents flex-box from squishing it */
     flex: none;
     align-items: flex-start;
   }
+
   #hero-2410 .cs-title,
   #hero-2410 .cs-text {
     text-align: left;
   }
+
   #hero-2410 .cs-image-group {
     font-size: min(1vw, 1rem);
   }
 }
+
 /* Large Desktop - 1400px */
 @media only screen and (min-width: 87.5rem) {
   #hero-2410 {
     padding-bottom: 10vw;
   }
 }
+
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #hero-2410:before {
     opacity: 0.1;
   }
+
   body.dark-mode #hero-2410 .cs-topper {
     color: var(--primary);
   }
+
   body.dark-mode #hero-2410 .cs-title,
   body.dark-mode #hero-2410 .cs-text {
     color: var(--bodyTextColorWhite);
   }
+
   body.dark-mode #hero-2410 .cs-topper,
   body.dark-mode #hero-2410 .cs-text {
     opacity: 0.8;
   }
+
   body.dark-mode #hero-2410 .cs-arrow {
     filter: grayscale(1) brightness(10000%);
   }
+
   body.dark-mode #hero-2410 .cs-circle {
     opacity: 0.5;
   }
+
   body.dark-mode #hero-2410 .cs-wave path {
     fill: var(--dark);
   }
 }
-                                
+
 /*-- -------------------------- -->
 <---          Services          -->
 <--- -------------------------- -*/
@@ -226,6 +251,7 @@
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
     margin-bottom: 3.125em;
   }
+
   .services .card {
     display: block;
     width: 100%;
@@ -233,9 +259,11 @@
     margin: auto;
     margin-bottom: 3.125em;
   }
+
   .services .card:last-of-type {
     margin-bottom: 0;
   }
+
   .services .card picture {
     background: var(--primary);
     width: 5.5em;
@@ -247,10 +275,12 @@
     margin-bottom: 1.4375em;
     border-radius: 50%;
   }
+
   .services .card picture img {
     width: 3em;
     height: 3em;
   }
+
   .services .card h2 {
     text-align: center;
     font-size: 2em;
@@ -259,6 +289,7 @@
     color: #1a1a1a;
     margin-bottom: 0.65em;
   }
+
   .services .card p {
     text-align: center;
     line-height: 1.33333333em;
@@ -266,6 +297,7 @@
     opacity: .7;
   }
 }
+
 /* Inbetween */
 @media only screen and (min-width: 768px) {
   .services {
@@ -275,28 +307,34 @@
     align-items: flex-start;
     width: 98%;
   }
+
   .services .card {
     margin: 0;
     max-width: 20.3125em;
   }
 }
+
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
   .services {
     padding: 3.125em 5em;
   }
+
   .services .card {
     max-width: 22.3125em;
   }
 }
+
 /* Dark mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #services {
     background: var(--medium);
   }
+
   body.dark-mode #services picture {
     background: var(--primaryDark);
   }
+
   body.dark-mode #services h2 {
     color: #fff;
     font-weight: bold;
@@ -316,6 +354,7 @@
     /* setting the row groups to display: contents causes the child cs-items to "appear" as direct children of the parent .cs-card-group */
     /* therefore, we can set the order of the .cs-items between rows, changing it between mobile and desktop */
   }
+
   #steps-1376 .cs-container {
     width: 100%;
     max-width: 90rem;
@@ -326,6 +365,7 @@
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
   }
+
   #steps-1376 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: center;
@@ -335,18 +375,22 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
+
   #steps-1376 .cs-topper {
     color: #767676;
   }
+
   #steps-1376 .cs-title {
     max-width: 25ch;
     margin: 0;
   }
+
   #steps-1376 .cs-group1,
   #steps-1376 .cs-group2 {
     /* the contents of this div are no longer its children. This div acts as if it doesn't exist and their content is now children of the next level parent, in this case, the cs-card-group. That way they can all be arranged together as children under 1 parent div instead of children in two different parent divs */
     display: contents;
   }
+
   #steps-1376 .cs-card-group {
     width: 100%;
     margin: 0 auto;
@@ -358,27 +402,35 @@
     gap: clamp(1rem, 2.3vw, 1.25rem);
     position: relative;
   }
+
   #steps-1376 .cs-group1 {
     display: contents;
   }
+
   #steps-1376 .cs-group1 .cs-item:nth-of-type(1) {
     order: 1;
   }
+
   #steps-1376 .cs-group1 .cs-item:nth-of-type(2) {
     order: 3;
   }
+
   #steps-1376 .cs-group1 .cs-item:nth-of-type(3) {
     order: 5;
   }
+
   #steps-1376 .cs-group2 {
     display: contents;
   }
+
   #steps-1376 .cs-group2 .cs-item:nth-of-type(1) {
     order: 2;
   }
+
   #steps-1376 .cs-group2 .cs-item:nth-of-type(2) {
     order: 4;
   }
+
   #steps-1376 .cs-item {
     text-align: center;
     list-style: none;
@@ -402,6 +454,7 @@
     z-index: 1;
     transition: background-color 0.3s, border-color 0.3s;
   }
+
   #steps-1376 .cs-item:before {
     content: "";
     width: 9.25rem;
@@ -416,25 +469,31 @@
     transform: translateY(6.25rem);
     transition: left 0.3s, transform 0.3s, opacity 0.3s;
   }
+
   #steps-1376 .cs-item:hover {
     background-color: var(--primary);
     border-color: var(--primary);
   }
+
   #steps-1376 .cs-item:hover:before {
     opacity: 0.2;
     left: -1rem;
     transform: translateY(0);
   }
+
   #steps-1376 .cs-item:hover .cs-icon {
     filter: grayscale(1) brightness(1000%);
   }
+
   #steps-1376 .cs-item:hover .cs-h3,
   #steps-1376 .cs-item:hover .cs-item-text {
     color: var(--bodyTextColorWhite);
   }
+
   #steps-1376 .cs-item:hover .cs-text {
     opacity: 0.8;
   }
+
   #steps-1376 .cs-picture {
     width: 6.25rem;
     height: auto;
@@ -446,10 +505,12 @@
     /* prevents flexbox from squishing it */
     flex: none;
   }
+
   #steps-1376 .cs-icon {
     width: 2rem;
     height: auto;
   }
+
   #steps-1376 .cs-h3 {
     font-size: 1.25rem;
     font-weight: bold;
@@ -459,6 +520,7 @@
     color: var(--headerColor);
     transition: color 0.3s;
   }
+
   #steps-1376 .cs-item-text {
     font-size: 0.875rem;
     line-height: 1.5em;
@@ -468,10 +530,12 @@
     color: var(--bodyTextColor);
     transition: color 0.3s, opacity 0.3s;
   }
+
   #steps-1376 .cs-waves {
     display: none;
   }
 }
+
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #steps-1376 .cs-card-group {
@@ -479,6 +543,7 @@
     align-items: center;
     gap: 2.5rem;
   }
+
   #steps-1376 .cs-group1 {
     display: flex;
     flex-direction: column;
@@ -486,6 +551,7 @@
     align-items: center;
     gap: 3rem;
   }
+
   #steps-1376 .cs-group2 {
     display: flex;
     flex-direction: column;
@@ -493,10 +559,12 @@
     align-items: center;
     gap: 3rem;
   }
+
   #steps-1376 .cs-item {
     /* prevents flexbox from squishing it */
     flex: none;
   }
+
   #steps-1376 .cs-waves {
     width: 4.4375rem;
     height: auto;
@@ -506,33 +574,39 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   #steps-1376 .cs-waves img {
     width: 100%;
     height: auto;
   }
 }
+
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #steps-1376 .cs-card-group {
     flex-direction: column;
   }
+
   #steps-1376 .cs-group1 {
     width: 100%;
     /* -8px to -30px, we put the clamp in a calc function to turn it into a negative number and pull down to cause the overlapping effect */
     margin-bottom: calc(clamp(.5rem, 2vw, 1.875rem)*-1);
     flex-direction: row;
   }
+
   #steps-1376 .cs-group2 {
     width: 100%;
     /* -8px to -30px */
     margin-top: calc(clamp(.5rem, 2vw, 1.875rem)*-1);
     flex-direction: row;
   }
+
   #steps-1376 .cs-waves {
     width: 110vw;
     max-width: 120rem;
     height: auto;
   }
+
   #steps-1376 .cs-waves:before {
     /* left continuation line */
     content: "";
@@ -545,6 +619,7 @@
     top: 5.25rem;
     right: 100%;
   }
+
   #steps-1376 .cs-waves:after {
     /* Right continuation line */
     content: "";
@@ -558,22 +633,27 @@
     left: 100%;
   }
 }
+
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #steps-1376 {
     background-color: rgba(0, 0, 0, 0.2);
   }
+
   body.dark-mode #steps-1376 .cs-item {
     background-color: var(--medium);
     border-color: rgba(255, 255, 255, 0.2);
   }
+
   body.dark-mode #steps-1376 .cs-item:hover {
     background-color: var(--primary);
     border-color: var(--primary);
   }
+
   body.dark-mode #steps-1376 .cs-topper {
     color: var(--primary);
   }
+
   body.dark-mode #steps-1376 .cs-title,
   body.dark-mode #steps-1376 .cs-text,
   body.dark-mode #steps-1376 .cs-h3,
@@ -581,12 +661,22 @@
   body.dark-mode #steps-1376 .cs-link {
     color: var(--bodyTextColorWhite);
   }
+
   body.dark-mode #steps-1376 .cs-text,
   body.dark-mode #steps-1376 .cs-item-text {
     opacity: 0.8;
   }
+
   body.dark-mode #steps-1376 .cs-waves {
     opacity: 0.1;
   }
 }
-                                
+
+/* Force Snipcart overlay & cart to be above everything */
+#snipcart,
+.snipcart,
+.snipcart-cart,
+.snipcart-cart__container,
+.snipcart-cart-header {
+  z-index: 999999 !important;
+}
