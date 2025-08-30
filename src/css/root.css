@@ -1325,12 +1325,3 @@
   font-weight: 700;
   text-decoration: none;
 }
-
-/* Force Snipcart overlay & cart to be above everything */
-#snipcart,
-.snipcart,
-.snipcart-cart,
-.snipcart-cart__container,
-.snipcart-cart-header {
-  z-index: 999999 !important;
-}

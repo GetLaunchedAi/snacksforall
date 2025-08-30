@@ -8,8 +8,8 @@ preloadImg: '/images/vending-banner.png'
 preloadCSS: '/css/local.css'
 permalink: '/'
 eleventyNavigation:
-  key: Home
-  order: 100
+key: Home
+order: 100
 ---
 
 <!-- ============================================ -->
@@ -24,7 +24,8 @@ eleventyNavigation:
         We help new and aspiring entrepreneurs build profitable vending businesses through in-person training,
         real-world experience, and step-by-step mentorship.
       </p>
-      <a href="/contact" class="cs-button-solid">Apply for Mentorship</a>
+      <!-- <a href="/contact" class="cs-button-solid">Apply for Mentorship</a> -->
+      <button class="snipcart-checkout custom-btn">Apply for Mentorship</button>
     </div>
     <div class="cs-image-group">
       <div class="cs-picture">
@@ -293,7 +294,7 @@ eleventyNavigation:
     </p>
 
     <button class="snipcart-checkout custom-btn">
-      <a class="">Apply Now</a>
+      Apply Now
     </button>
 
 
@@ -329,6 +330,59 @@ eleventyNavigation:
       url: "https://snacksforall.netlify.app/",   // must match a valid URL on your site
       quantity: 1
     });
+  });
+
+  const snipcartBtns = document.querySelectorAll('.snipcart-checkout');
+  const navBar = document.querySelector('#cs-navigation');
+  const servicesCard = document.querySelector('.services');
+
+  snipcartBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      navBar.classList.add('no-z-index');
+      servicesCard.classList.add('no-z-index');
+    });
+  });
+
+  document.addEventListener("snipcart.ready", () => {
+    const observer = new MutationObserver(mutations => {
+      for (const m of mutations) {
+        for (const node of m.addedNodes) {
+          if (!(node instanceof HTMLElement)) continue;
+
+          // find close button in added node/subtree
+          const closeBtn = node.matches?.(".snipcart-cart-header__close-button")
+            ? node
+            : node.querySelector?.(".snipcart-cart-header__close-button");
+
+          // find secondary "Back to store" button in added node/subtree
+          const secondaryBtn = node.matches?.(".snipcart-button-secondary")
+            ? node
+            : node.querySelector?.(".snipcart-button-secondary");
+
+          // shared action for both buttons
+          const handleCloseActions = () => {
+            setTimeout(() => {
+              navBar?.classList.remove("no-z-index");
+              servicesCard?.classList.remove("no-z-index");
+            }, 50);
+          };
+
+          // attach to close button
+          if (closeBtn && !closeBtn.dataset.handlerAttached) {
+            closeBtn.dataset.handlerAttached = "true";
+            closeBtn.addEventListener("click", handleCloseActions);
+          }
+
+          // attach to secondary "Back to store" button
+          if (secondaryBtn && !secondaryBtn.dataset.handlerAttached) {
+            secondaryBtn.dataset.handlerAttached = "true";
+            secondaryBtn.addEventListener("click", handleCloseActions);
+          }
+        }
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
   });
 
 </script>
