@@ -3,13 +3,11 @@
 //
 const navbarMenu = document.querySelector("#cs-navigation .mobile-menu");
 const hamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
-const serviceMenu = document.querySelector("#navigation .dropdown");
+const navLinks = document.querySelectorAll('.cs-li-link');
 const about = document.querySelector('#About\\ Us')
 const contact = document.querySelector('#Contact')
 
-const screenWidth = window.screen.width;
-
-hamburgerMenu.addEventListener('click', function () {
+const togggleMenu = () => {
     const isNavOpen = navbarMenu.classList.contains("open");
     if (!isNavOpen) {
         hamburgerMenu.setAttribute("aria-expanded", true);
@@ -22,23 +20,14 @@ hamburgerMenu.addEventListener('click', function () {
         navbarMenu.classList.remove("open");
         console.log('closed');
     }
+}
+
+hamburgerMenu.addEventListener('click', function () {
+    togggleMenu()
 });
 
-// serviceMenu.addEventListener('click', function () {
-//     const isServiceOpen = serviceMenu.classList.contains("open");
-//     if (!isServiceOpen) {
-//         serviceMenu.setAttribute("aria-expanded", true);
-//         serviceMenu.classList.add("open");
-//         if (screenWidth < 770) {
-//             about.style.display = 'none'
-//             contact.style.display = 'none'
-//         }
-//     } else {
-//         serviceMenu.setAttribute("aria-expanded", false);
-//         serviceMenu.classList.remove("open");
-//         if (screenWidth < 770) {
-//             about.style.display = 'block'
-//             contact.style.display = 'block'
-//         }
-//     }
-// });
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        togggleMenu();
+    });
+});
