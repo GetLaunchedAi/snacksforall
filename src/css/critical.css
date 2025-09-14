@@ -161,6 +161,7 @@
     display: block;
     /* optional if the media is purely decorative */
     pointer-events: none;
+    border-radius: 1rem;
   }
 }
 
