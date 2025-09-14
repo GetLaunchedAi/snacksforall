@@ -128,8 +128,8 @@
   /* unchanged container sizing */
   #hero-2410 .cs-image-group {
     font-size: min(1.7vw, .55rem);
-    width: 52.1875em;
-    height: 52.25em;
+    width: 50%;
+    height: 42.5em;
     flex: none;
     position: relative;
     z-index: 2;
@@ -138,12 +138,14 @@
   /* unchanged picture box */
   #hero-2410 .cs-picture {
     width: 100%;
-    height: 52.25em;
+    height: 42.5em;
     display: flex;
     align-items: flex-end;
     position: absolute;
     top: 0;
     right: 0;
+    object-position: center;
+    object-fit: contain;
   }
 
   /* key bit: style IMG and VIDEO exactly the same */
